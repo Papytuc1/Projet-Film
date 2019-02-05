@@ -1,0 +1,39 @@
+.grid-container {
+    height: 100vh;
+    /* vh = view height, en gros tout l'ecran avec 100 */
+    display: grid;
+    margin: 0;
+    padding: 0;
+    grid-gap: 10px;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "header header"
+                         "aside liste-film"
+                         "footer footer";
+}
+
+header{
+    background-color: grey;
+    grid-area: header;
+
+}
+
+aside{
+    background-color: brown;
+    grid-area : aside;
+}
+footer{
+    background-color: aqua;
+    grid-area: footer;
+}
+.liste-film{
+    background-color: yellow;
+    grid-area: liste-film;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+}
+
+

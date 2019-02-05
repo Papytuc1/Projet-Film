@@ -1,0 +1,17 @@
+.liste-film{
+display: grid;
+
+}
+
+.film{
+
+}
+#film > div:nth-child(even){
+    background-color: red;
+}
+#film>div:nth-child(odd){
+    background-color: blue;
+}
+.red{
+    color: red;
+}
