@@ -18,20 +18,41 @@ display: grid;
 .taille{
     text-align: center;
     height: 355px;
+    position: relative;
 }
 img{
-    height: 355px;
+   /*  height: 355px; */
     width: auto;
-}
-/* .titre{
     position: absolute;
-    top: 30px;
-} */
+    left: 100px;
+
+}
+
+p{
+    opacity: 0;
+}
+
 .desciption-film{
-    top: 30px;
-    height: 355px;
-    max-width: 340px;
-    overflow: scroll;   
+    position: relative;
+    height: 290px;
+   /*  max-width: 340px; */
+    overflow: auto;   
     visibility: hidden; 
 }
-p{}
+@keyframes opac1{
+    from{opacity:1}
+    to{opacity:0}
+    to{visibility: hidden;}
+ }
+ @keyframes opac2{
+    from{opacity: 0;}
+    to{opacity:1}
+ }
+ .animate-opacity-img{
+    -webkit-animation:opac 1.5s;
+    animation:opac1 1.5s;
+ }
+ .animate-opacity-text{
+    -webkit-animation:opac 1.5s;
+    animation:opac2 1.5s;
+ }

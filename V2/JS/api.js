@@ -34,26 +34,36 @@ function loadDoc() {
              para.textContent= element.title;
              para.classList='titre';
              desc = document.createElement('p');
+             desc.className='description';
              desc.textContent= element.overview;
              // image
              img = document.createElement('img');
              img.src="https://image.tmdb.org/t/p/w200"+element.poster_path;
+             img.className='uneImage';
              div = document.createElement('div'); // grande
              div.classList = 'desciption-film';
              
              article.onmouseenter = function(){
-                 this.querySelector('img').style.visibility ='hidden';           
-                this.querySelector('div').style.visibility ='visible';
+                this.querySelector('img').classList='animate-opacity-img';
+                this.querySelector('.description').classList ='description animate-opacity-text';
+                this.querySelector('p').classList ='titre animate-opacity-text';            
+                /* this.querySelector('img').style.visibility ='hidden';  */          
+               /*  this.querySelector('p').style.visibility ='visible'; */
+                /* this.querySelector('.description').style.visibility ='visible'; */
             }
             article.onmouseleave=function(){
-                this.querySelector('img').style.visibility ='visible';  
-                this.querySelector('div').style.visibility ='hidden';
+                this.querySelector('img').classList='animate-opacity-text';
+                this.querySelector('.description').classList ='description animate-opacity-img';
+                this.querySelector('p').classList ='titre animate-opacity-img';   
+                /* this.querySelector('img').style.visibility ='visible';  
+                this.querySelector('p').style.visibility ='hidden';
+                this.querySelector('.description').style.visibility ='hidden'; */
             }
            
             article.appendChild(img);
             article.className ='taille';                     
-            div.appendChild(para);
-            div.appendChild(desc);
+            article.appendChild(para);
+            article.appendChild(desc);
             article.appendChild(div);
             document.querySelector('#film').appendChild(article);
         })
