@@ -15,3 +15,23 @@ display: grid;
 .red{
     color: red;
 }
+.taille{
+    text-align: center;
+    height: 355px;
+}
+img{
+    height: 355px;
+    width: auto;
+}
+/* .titre{
+    position: absolute;
+    top: 30px;
+} */
+.desciption-film{
+    top: 30px;
+    height: 355px;
+    max-width: 340px;
+    overflow: scroll;   
+    visibility: hidden; 
+}
+p{}

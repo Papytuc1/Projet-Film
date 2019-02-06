@@ -27,7 +27,6 @@ footer{
     grid-area: footer;
 }
 .container-liste{
-    background-color: yellow;
     grid-area: container-liste;
     display: grid;
     
