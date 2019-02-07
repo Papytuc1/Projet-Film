@@ -49,10 +49,12 @@ p{
     to{opacity:1}
  }
  .animate-opacity-img{
+    -webkit-animation:opac 1.5s;
     animation:opac1 1.5s;
     animation-fill-mode: forwards;/* permet de maintenir l'etat de fin de la keyrames*/
  }
  .animate-opacity-text{
+    -webkit-animation:opac 1.5s;
     animation:opac2 1.5s;
     animation-fill-mode: forwards;
  }
