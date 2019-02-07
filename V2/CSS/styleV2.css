@@ -23,7 +23,7 @@ img{
     max-width: 200px;
     border-radius: 15px;
 }
-p{
+p,h2{
     text-align: center;
     opacity: 0;
     color: wheat;
