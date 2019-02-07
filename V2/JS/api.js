@@ -69,7 +69,7 @@ function loadDoc() {
         })
       }
     };
-    xhttp.open("GET", "https://api.themoviedb.org/3/discover/movie?api_key=bbad9d275376358a8c117caf83f0cba0&language=fr-FR&sort_by=with_genres=18%26primary_release_year=2014&include_adult=true&include_video=true&page=2", true);
+    xhttp.open("GET", "https://api.themoviedb.org/3/discover/movie?api_key=bbad9d275376358a8c117caf83f0cba0&language=fr-FR&sort_by=with_genres=18%26primary_release_year=2014&include_adult=false&include_video=true&page=2", true);
     xhttp.send();
    
   };
