@@ -1,11 +1,4 @@
-.liste-film{
-display: grid;
 
-}
-
-.film{
-
-}
 #film > div:nth-child(even){
     background-color: red;
 }
@@ -16,33 +9,37 @@ display: grid;
     color: red;
 }
 .taille{
-    text-align: center;
-    height: 355px;
+    background:radial-gradient(at 30% top, rgba(7, 64, 52, 1) 0%, rgba(8, 28, 36, 1) 70%);
+    border-radius: 15px;
+    height: 325px;
     position: relative;
 }
 img{
-   /*  height: 355px; */
     width: auto;
     position: absolute;
-    left: 100px;
-
+    left: 38px;
+    top: 10px;
+    min-height: 300px;
+    max-width: 200px;
+    border-radius: 15px;
 }
-
 p{
+    text-align: center;
     opacity: 0;
+    color: wheat;
 }
-
-.desciption-film{
+a:link
+{
+text-decoration:none;
+} 
+.description{
     position: relative;
-    height: 290px;
-   /*  max-width: 340px; */
+    height: 250px;
     overflow: auto;   
-    visibility: hidden; 
 }
 @keyframes opac1{
     from{opacity:1}
     to{opacity:0}
-    to{visibility: hidden;}
  }
  @keyframes opac2{
     from{opacity: 0;}
@@ -50,11 +47,12 @@ p{
  }
  .animate-opacity-img{
     -webkit-animation:opac 1.5s;
-    animation:opac1 1.5s;
+    animation:opac1 .6s;
     animation-fill-mode: forwards;/* permet de maintenir l'etat de fin de la keyrames*/
  }
  .animate-opacity-text{
     -webkit-animation:opac 1.5s;
-    animation:opac2 1.5s;
+    animation:opac2 .6s;
     animation-fill-mode: forwards;
  }
+ 
