@@ -1,58 +1,80 @@
-
-#film > div:nth-child(even){
-    background-color: red;
-}
-#film>div:nth-child(odd){
-    background-color: blue;
-}
-.red{
-    color: red;
-}
-.taille{
-    background:radial-gradient(at 30% top, rgba(7, 64, 52, 1) 0%, rgba(8, 28, 36, 1) 70%);
+.taille {
+    background: radial-gradient(at 30% top, rgba(7, 64, 52, 1) 0%, rgba(8, 28, 36, 1) 70%);
     border-radius: 15px;
     height: 325px;
     position: relative;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
-img{
+
+.titre {
+    font-size: 120%;;
+    opacity: 0;
+    color: wheat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   /*  margin-bottom: 5%;
+    padding-top: 5%; */
+}
+
+.uneImage {
     width: auto;
     position: absolute;
-    left: 38px;
-    top: 10px;
     min-height: 300px;
     max-width: 200px;
     border-radius: 15px;
 }
-p,h2{
-    text-align: center;
-    opacity: 0;
+
+a:link {
+    text-decoration: none;
     color: wheat;
 }
-a:link
-{
-text-decoration:none;
-} 
-.description{
+
+a:visited {
+    color: wheat;
+}
+
+.description {
     position: relative;
     height: 250px;
-    overflow: auto;   
+    overflow: auto;
+    text-align: center;
+    opacity: 0;
 }
-@keyframes opac1{
-    from{opacity:1}
-    to{opacity:0}
- }
- @keyframes opac2{
-    from{opacity: 0;}
-    to{opacity:1}
- }
- .animate-opacity-img{
-    -webkit-animation:opac 1.5s;
-    animation:opac1 .6s;
-    animation-fill-mode: forwards;/* permet de maintenir l'etat de fin de la keyrames*/
- }
- .animate-opacity-text{
-    -webkit-animation:opac 1.5s;
-    animation:opac2 .6s;
+
+@keyframes opac1 {
+    from {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes opac2 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.animate-opacity-img {
+    -webkit-animation: opac 1.5s;
+    animation: opac1 .6s;
     animation-fill-mode: forwards;
- }
- 
+    /* permet de maintenir l'etat de fin de la keyrames*/
+}
+
+.animate-opacity-text {
+    -webkit-animation: opac 1.5s;
+    animation: opac2 .6s;
+    animation-fill-mode: forwards;
+}
