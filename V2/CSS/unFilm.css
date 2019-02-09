@@ -18,9 +18,11 @@ aside {
 }
 
 .titre-h1 {
-  text-align: center;
   font-size: 2.5em;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .subtitle {
@@ -60,7 +62,7 @@ aside {
 iframe {
   width: 80%;
   border: none;
-  height: 80%;
+  height: 85%;
 }
 
 .trailer {
@@ -165,7 +167,9 @@ iframe {
   border-radius: 50%;
   cursor: pointer;
   -webkit-animation: pulse 1.5s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  animation: pulse 1.5s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: pulse 1.5s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);/* cubic-bezier(T1, E1, T2, E2);
+  cubic bezier je dis qu'a 25% du temps de l'ani j'ai fait 46% de l'anime
+  et qu'a 45 du temps j'ai fait 94% de l'anime */
 }
 
 .button--pulse::before {

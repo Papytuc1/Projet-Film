@@ -124,22 +124,22 @@ $.when(ajax1(), ajax2(), ajax3(), ajax4()).done(function (movie, credits, video,
 });
 //rotation carousel
 var carousel = document.querySelector('.carousel');
-var cellCount = 9;
-var selectedIndex = 0;
+var count = 9;
+var index = 0;
 
 function rotateCarousel() {
-    var angle = selectedIndex / cellCount * -360;
+    var angle = index / count * -360;
     carousel.style.transform = 'translateZ(-144px) rotateY(' + angle + 'deg)';
 }
 
 var prevButton = document.querySelector('.previous');
 prevButton.addEventListener('click', function () {
-    selectedIndex--;
+    index--;
     rotateCarousel();
 });
 
 var nextButton = document.querySelector('.next');
 nextButton.addEventListener('click', function () {
-    selectedIndex++;
+    index++;
     rotateCarousel();
 });
