@@ -19,14 +19,14 @@ function ajax2() {
 
 function ajax3() {
     return $.ajax({
-        url: `https://api.themoviedb.org/3/movie/${idFilm}/videos?api_key=bbad9d275376358a8c117caf83f0cba0&language=en-US`,
+        url: `https://api.themoviedb.org/3/movie/${idFilm}/videos?api_key=bbad9d275376358a8c117caf83f0cba0&language=fr-FR`,
         success: function (video) {}
     })
 };
 
 function ajax4() {
     return $.ajax({
-        url: `https://api.themoviedb.org/3/movie/${idFilm}/recommendations?api_key=bbad9d275376358a8c117caf83f0cba0&language=en-US`,
+        url: `https://api.themoviedb.org/3/movie/${idFilm}/recommendations?api_key=bbad9d275376358a8c117caf83f0cba0&language=fr-FR`,
         success: function (recommendations) {}
     })
 };
@@ -35,6 +35,7 @@ function ajax4() {
 d'ou les args[0] dans la fonction*/
 $.when(ajax1(), ajax2(), ajax3(), ajax4()).done(function (movie, credits, video, recommendations) {
     //AFFICHAGE DU FILM
+    document.querySelector("title").textContent=movie[0].title;
     //image
     let img = document.createElement('img');
     img.className = 'uneImage';
@@ -92,7 +93,12 @@ $.when(ajax1(), ajax2(), ajax3(), ajax4()).done(function (movie, credits, video,
     //trailer
     var trailer = document.createElement('iframe');
     trailer.setAttribute('allowFullScreen', '');
+    try{
     trailer.src = "https://www.youtube.com/embed/" + video[0].results[0].key;
+    }
+    catch{
+        console.log("error");
+    };
     divIframe.appendChild(trailer);
     document.querySelector(".containerUl").appendChild(divIframe);
 
