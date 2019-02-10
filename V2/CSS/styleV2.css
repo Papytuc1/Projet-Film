@@ -78,3 +78,24 @@ a:visited {
     animation: opac2 .6s;
     animation-fill-mode: forwards;
 }
+#filtre{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+aside li{
+    list-style: none;
+    font-size: 2em;
+    color: wheat;
+    cursor: pointer;
+    text-align: center;
+    transition: 1s;
+    min-width: 80%;
+}
+.active{
+    background-color: green;
+    border-radius: 18px;
+    transform: translateX(10px);
+}

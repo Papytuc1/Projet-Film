@@ -6,28 +6,24 @@ console.log('salut');
 function ajax1() {
     return $.ajax({
         url: `https://api.themoviedb.org/3/movie/${idFilm}?api_key=bbad9d275376358a8c117caf83f0cba0&language=fr-FR`,
-        success: function (result) {}
     })
 };
 
 function ajax2() {
     return $.ajax({
         url: `https://api.themoviedb.org/3/movie/${idFilm}/credits?api_key=bbad9d275376358a8c117caf83f0cba0&language=fr-FR`,
-        success: function (credits) {}
     })
 };
 
 function ajax3() {
     return $.ajax({
         url: `https://api.themoviedb.org/3/movie/${idFilm}/videos?api_key=bbad9d275376358a8c117caf83f0cba0&language=fr-FR`,
-        success: function (video) {}
     })
 };
 
 function ajax4() {
     return $.ajax({
         url: `https://api.themoviedb.org/3/movie/${idFilm}/recommendations?api_key=bbad9d275376358a8c117caf83f0cba0&language=fr-FR`,
-        success: function (recommendations) {}
     })
 };
 /*une fonction qui s'occupe de l'affichage , .when: quand fonction qui contiennent les requete ajax sont effectuer

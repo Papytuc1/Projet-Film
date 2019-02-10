@@ -6,7 +6,7 @@
     padding: 0;
     grid-gap: 10px;
     grid-template-rows: 20vh 1fr 10vh;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 6fr;
     grid-template-areas: "header header"
                          "aside container-liste"
                          "footer footer";
@@ -19,7 +19,7 @@ header{
 }
 
 aside{
-    background-color: brown;
+    background-image: radial-gradient(circle at 20% 50%, rgba(14.12%, 14.51%, 16.86%, 0.88) 100%, rgba(14.12%, 14.51%, 16.86%, 0.98) 0%);
     grid-area : aside;
 }
 footer{
