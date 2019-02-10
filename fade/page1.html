@@ -15,12 +15,18 @@
     <script>
         fadeInPage()
     </script>
-    <div>
+    <div id="text">
         <p>Je suis la page 1</p>
         <a href="page2.html">Allons vers la page 2 en fondu</a>
+
     </div>
 
-
+<script>
+    var $a = document.createElement('a');
+    $a.setAttribute('href',"page2.html");
+    $a.innerText = "Allons vers la page 2 en fondu DYNAMIQUE !";
+    document.querySelector('#text').appendChild($a);
+</script>
 </body>
 
 </html>
