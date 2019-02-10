@@ -1,51 +1,32 @@
-/* var xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://api.themoviedb.org/3/discover/movie?api_key=bbad9d275376358a8c117caf83f0cba0&language=fr-FR&sort_by=with_genres=18%26primary_release_year=2014&include_adult=true&include_video=true&page=2');
-xhr.onload = function() {
-    if (xhr.status === 200) {
-        var e =JSON.parse(xhr.responseText);
-        console.log('coucou');
-        e.results.forEach(element =>{
-            let article = document.createElement('article');
-            let para = document.createElement('p');
-            para.textContent="titre"+element.title;
-            article.appendChild(para);
-            document.querySelector('#film').appendChild(article);
-        })
-    }
-    else {
-        alert('Request failed.  Returned status of ' + xhr.status);
-    }
-}; */
-/* https://api.themoviedb.org/3/discover/movie?api_key=bbad9d275376358a8c117caf83f0cba0&language=en-US&include_adult=false&include_video=false&page=1&with_genres=28 */
-
-
+var tabGlobal = [];
+//fonction qui va filtrer si un id n'est pas de le tableau il l'ajout sinon il le retire
 function toggleFilter(event) {
   console.log(event.data("value"));
-  if (tabGlobal.indexOf(event.data("value"))!=-1) {
+  if (tabGlobal.indexOf(event.data("value")) != -1) {
     tabGlobal.splice(tabGlobal.indexOf(event.data("value")), 1);
     /*splice coupe un bout du tableau on lui dis
       de coupé a partir de l'index de la valeur trouvé et d'enlevé un element*/
-  event.removeClass("active");
+    event.removeClass("active");
   } else {
-    tabGlobal.push(event.data("value"));
+    tabGlobal.push(event.data("value")); // je push la data value défini plus bas ligne 58
     event.addClass("active");
   };
   console.log(tabGlobal);
 }
-
-var tabGlobal = [];
 /*le .on ne s'attache pas sur des element non crée au chargement de la page (dynamique)
 j'attache le on sur liste-checkbox et en second argument 
 on met la class sur lequel doit réelement s'attacher
 ancienement .delegate */
 $('.liste-checkbox').on('click', ".liste", function (event) {
-    toggleFilter($(event.target));
+  toggleFilter($(event.target));
+  /* event est un object qui représente le contexte de l'evenement (ce qui s'est passé, quand, comment etc) 
+      et event.target ca "cible" l'element  qui a declenché l'event*/
   document.querySelector("#film").innerHTML = ""; //je met la div id film a 0;
-  $.when(ajax1(tabGlobal)).done(function (a1) {
+  $.when(ajax1()).done(function (a1) {
     affichage(a1);
   });
 });
-
+//requete ajax
 function ajax1() {
   return $.ajax({
     url: "https://api.themoviedb.org/3/discover/movie",
@@ -57,8 +38,8 @@ function ajax1() {
     },
   })
 };
-
-function filtre() {
+// fonction qui permet l'affichage d'une liste de filtres
+function filtreListe() {
   $.ajax({
     url: "https://api.themoviedb.org/3/genre/movie/list",
     method: 'GET',
@@ -78,8 +59,8 @@ function filtre() {
       });
       document.querySelector(".liste-checkbox").appendChild(selectList);
     }
-  })
-}
+  });
+};
 
 function affichage(movies) {
   movies.results.forEach(function (element, index) {
@@ -118,7 +99,7 @@ function affichage(movies) {
   });
 };
 
-$.when(ajax1()).done(function (a1) {
+$.when(ajax1()).done(function (a1) { //a1 pointe sur ajax1()
   affichage(a1);
 });
-filtre();
+filtreListe();
