@@ -8,7 +8,7 @@ header {
   justify-content: space-between;
 }
 aside {
-  background-color: white;
+  max-height: 750px;
 }
 
 #unFilm {

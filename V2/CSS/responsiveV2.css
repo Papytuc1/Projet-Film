@@ -1,5 +1,5 @@
 .grid-container {
-    height: 100vh;
+    height: 100%;
     /* vh = view height, en gros tout l'ecran avec 100 */
     display: grid;
     margin: 0;
@@ -10,8 +10,11 @@
     grid-template-areas: "header header"
                          "aside container-liste"
                          "footer footer";
+                        
 }
-
+body{
+    background-color: #787C8F; 
+}
 header{
     background-color:#0F111C;
     grid-area: header;
