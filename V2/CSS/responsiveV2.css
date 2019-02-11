@@ -1,6 +1,6 @@
+  /* vh = view height, en gros tout l'ecran avec 100 */
 .grid-container {
     height: 100%;
-    /* vh = view height, en gros tout l'ecran avec 100 */
     display: grid;
     margin: 0;
     padding: 0;

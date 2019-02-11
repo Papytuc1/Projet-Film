@@ -1,243 +1,240 @@
 .grid-container {
-  grid-gap: 10px 0px !important;
-}
-header {
-  background-color: #0F111C;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-aside {
-  max-height: 750px;
-}
-
-#unFilm {
-  background-image: radial-gradient(circle at 20% 50%, rgba(14.12%, 14.51%, 16.86%, 0.98) 0%, rgba(14.12%, 14.51%, 16.86%, 0.88) 100%);
-  color: wheat;
-  max-height: 750px;
-}
-
-.titre-h1 {
-  font-size: 2.5em;
+    grid-gap: 10px 0px !important;
+  }
+  header {
+    background-color: #0F111C;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  aside {
+    max-height: 750px;
+  }
+  
+  #unFilm {
+    background-image: radial-gradient(circle at 20% 50%, rgba(14.12%, 14.51%, 16.86%, 0.98) 0%, rgba(14.12%, 14.51%, 16.86%, 0.88) 100%);
+    color: wheat;
+    max-height: 750px;
+  }
+  .uneImage {
+    min-width: 500px;
+    min-height: 750px;
+  }
+  .titre-h1 {
+    font-size: 2.5em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .subtitle {
+    text-align: center;
+    width: 39%;
+  }
+  
+  .synopsis {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 0% 5% 0% 5%;
+  }
+  /* container Acteur+trailer */
+  .containerUl {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3%;
+  }
+ 
+  /* Acteurs */
+  .liste-acteur {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    margin: 0;
+    grid-template-rows: 57%;
+    grid-gap: 0px 10px
+  }
+  .un-acteur {
+    text-decoration: none;
+    display: grid;
+    grid-template-rows: 22% 1fr;
+  }
+  .imgActeur {
+    max-height: 135px;
+  }
+  /* Trailer */
+  iframe {
+    width: 80%;
+    border: none;
+    height: 85%;
+  }
+  
+  .trailer {
+    background-image: radial-gradient(circle at 20% 50%, rgba(14.12%, 14.51%, 16.86%, 0.88) 100%, rgba(14.12%, 14.51%, 16.86%, 0.98) 0%);
+    width: 50%;
+    display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.subtitle {
-  text-align: center;
-  width: 39%;
-}
-
-.synopsis {
-  text-align: center;
-  font-size: 1.5em;
-  padding: 0% 5% 0% 5%;
-}
-
-.liste-acteur {
-  display: grid;
-  grid-template-columns: repeat(3, 33%);
-  margin: 0;
-  grid-template-rows: 57%;
-  grid-gap: 0px 10px
-}
-
-.containerUl {
-  display: flex;
-  justify-content: space-around;
-}
-
-.un-acteur {
-  text-decoration: none;
-  display: grid;
-  grid-template-rows: 22% 1fr;
-}
-
-.imgActeur {
-  max-height: 135px;
-}
-
-iframe {
-  width: 80%;
-  border: none;
-  height: 85%;
-}
-
-.trailer {
-  background-image: radial-gradient(circle at 20% 50%, rgba(14.12%, 14.51%, 16.86%, 0.88) 100%, rgba(14.12%, 14.51%, 16.86%, 0.98) 0%);
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: -2%;
-}
-
-.uneImage {
-  min-width: 500px;
-  min-height: 750px;
-}
-/* Mon carousel de recomendations */
-.carousel-bouton{
-  width: 20%;
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-}
-.scene {
-  width: 130px;
-  height: 140px;
-  position: relative;
-  perspective: 1000px;
-}
-.button{
-  padding: 0;
-  border: 0;
-  opacity: 0; 
-  width: 50%;
-  z-index: 5;
-}
-.carousel {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  transform-style: preserve-3d;
-  transform: translateZ(-144px);
-  transition: 1s;
-}
-
-.carouselRecomendation {
-  position: absolute;
-  width: 95px;
-  height: 120px;
-  left: 20px;
-  top: 10px;
-  transition: 1s;
-}
-.carouselRecomendation:hover{
-  -webkit-transform: scale(1.3);
-	transform: scale(1.3);
-}
-
-.carouselContainer:nth-child(1) {
-  transform: rotateY(0deg) translateZ(144px);
-}
-
-.carouselContainer:nth-child(2) {
-  transform: rotateY(40deg) translateZ(144px);
-}
-
-.carouselContainer:nth-child(3) {
-  transform: rotateY(80deg) translateZ(144px);
-}
-
-.carouselContainer:nth-child(4) {
-  transform: rotateY(120deg) translateZ(144px);
-}
-
-.carouselContainer:nth-child(5) {
-  transform: rotateY(160deg) translateZ(144px);
-}
-
-.carouselContainer:nth-child(6) {
-  transform: rotateY(200deg) translateZ(144px);
-}
-
-.carouselContainer:nth-child(7) {
-  transform: rotateY(240deg) translateZ(144px);
-}
-
-.carouselContainer:nth-child(8) {
-  transform: rotateY(280deg) translateZ(144px);
-}
-
-.carouselContainer:nth-child(9) {
-  transform: rotateY(320deg) translateZ(144px);
-}
-
-/* le bouton retour */
-.button--pulse {
-  position: relative;
-  display: block;
-  border: 1px solid #fff;
-  width: 75px;
-  height: 75px;
-  left: 150%;
-  border-radius: 50%;
-  cursor: pointer;
-  -webkit-animation: pulse 1.5s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  animation: pulse 1.5s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);/* cubic-bezier(T1, E1, T2, E2);
-  cubic bezier je dis qu'a 25% du temps de l'ani j'ai fait 46% de l'anime
-  et qu'a 45 du temps j'ai fait 94% de l'anime */
-}
-
-.button--pulse::before {
-  content: '';
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #fff;
-  position: absolute;
-  box-shadow: 0 0 0 0 rgba(255, 255, 255, .5);
-  left: 50%;
-  top: 50%;
-  -ms-transform: translate(-50%, -50%);
-  /* IE 9 */
-  -webkit-transform: translate(-50%, -50%);
-  /* Safari and Chrome */
-  transform: translate(-50%, -50%);
-  -webkit-animation: pulse-shadow 1.5s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  animation: pulse-shadow 1.5s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(.8);
   }
-
-  70% {
-    transform: scale(1);
+  /* Mon carousel de recomendations */
+  .carousel-bouton{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
   }
-
-  100% {
-    transform: scale(.8);
+  .scene {
+    width: 130px;
+    height: 140px;
+    position: relative;
+    perspective: 1000px;
   }
-}
-
-@keyframes pulse-shadow {
-  0% {}
-
-  70% {
-    box-shadow: 0 0 0 35px rgba(255, 255, 255, 0);
+  .button{
+    padding: 0;
+    border: 0;
+    opacity: 0; 
+    width: 50%;
+    z-index: 5;
   }
-
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  .carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: translateZ(-144px);
+    transition: 1s;
   }
-}
-
-#voile {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-  pointer-events: none;
-  background: black;
-  animation: opac1;
-  animation-duration: 1.5s;
-  -webkit-animation-duration: 1.5s;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-}
-@keyframes opac1 {
-  from {
-      opacity: 1
+  
+  .carouselRecomendation {
+    position: absolute;
+    width: 95px;
+    height: 120px;
+    left: 20px;
+    top: 10px;
+    transition: 1s;
   }
-
-  to {
-      opacity: 0
+  .carouselRecomendation:hover{
+    -webkit-transform: scale(1.3);
+      transform: scale(1.3);
   }
-}
+  
+  .carouselContainer:nth-child(1) {
+    transform: rotateY(0deg) translateZ(144px);
+  }
+  
+  .carouselContainer:nth-child(2) {
+    transform: rotateY(40deg) translateZ(144px);
+  }
+  
+  .carouselContainer:nth-child(3) {
+    transform: rotateY(80deg) translateZ(144px);
+  }
+  
+  .carouselContainer:nth-child(4) {
+    transform: rotateY(120deg) translateZ(144px);
+  }
+  
+  .carouselContainer:nth-child(5) {
+    transform: rotateY(160deg) translateZ(144px);
+  }
+  
+  .carouselContainer:nth-child(6) {
+    transform: rotateY(200deg) translateZ(144px);
+  }
+  
+  .carouselContainer:nth-child(7) {
+    transform: rotateY(240deg) translateZ(144px);
+  }
+  
+  .carouselContainer:nth-child(8) {
+    transform: rotateY(280deg) translateZ(144px);
+  }
+  
+  .carouselContainer:nth-child(9) {
+    transform: rotateY(320deg) translateZ(144px);
+  }
+  
+  /* le bouton retour */
+  .button--pulse {
+    position: relative;
+    display: block;
+    border: 1px solid #fff;
+    width: 75px;
+    height: 75px;
+    left: 150%;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-animation: pulse 1.5s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation: pulse 1.5s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);/* cubic-bezier(T1, E1, T2, E2);
+    cubic bezier je dis qu'a 25% du temps de l'ani j'ai fait 46% de l'anime
+    et qu'a 45 du temps j'ai fait 94% de l'anime */
+  }
+  
+  .button--pulse::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, .5);
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    /* IE 9 */
+    -webkit-transform: translate(-50%, -50%);
+    /* Safari and Chrome */
+    transform: translate(-50%, -50%);
+    -webkit-animation: pulse-shadow 1.5s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation: pulse-shadow 1.5s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(.8);
+    }
+  
+    70% {
+      transform: scale(1);
+    }
+  
+    100% {
+      transform: scale(.8);
+    }
+  }
+  
+  @keyframes pulse-shadow {
+    0% {}
+  
+    70% {
+      box-shadow: 0 0 0 35px rgba(255, 255, 255, 0);
+    }
+  
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+  }
+  
+  #voile {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    pointer-events: none;
+    background: black;
+    animation: opac1;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  @keyframes opac1 {
+    from {
+        opacity: 1
+    }
+  
+    to {
+        opacity: 0
+    }
+  }
